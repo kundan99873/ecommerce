@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         changeOrigin: true,
-        target: "https://ecommerce-backend-mu-smoky.vercel.app",
+        target: `{window.location.origin}`,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
