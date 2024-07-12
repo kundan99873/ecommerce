@@ -16,7 +16,10 @@ import errorMiddleware from "./middleware/error.js";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 
