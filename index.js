@@ -15,6 +15,8 @@ import wishlistRouter from "./router/wishlistRouter.js";
 import errorMiddleware from "./middleware/error.js";
 import morgan from "morgan";
 import dotenv from "dotenv";
+import path from 'path';
+
 dotenv.config();
 const app = express();
 
