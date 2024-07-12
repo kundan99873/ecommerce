@@ -18,8 +18,10 @@ import dotenv from "dotenv";
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Define __filename and __dirname in ES module scope
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 dotenv.config();
 const app = express();
 
@@ -42,9 +44,9 @@ cloudinary.v2.config({
 });
 
 app.use(express.static(path.resolve(__dirname, "front", "build")));
-  app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "front", "build", "index.html"));
-  });
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "front", "build", "index.html"));
+});
 
 connection();
 
