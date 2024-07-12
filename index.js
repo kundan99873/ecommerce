@@ -45,7 +45,7 @@ cloudinary.v2.config({
 
 app.use(express.static(path.resolve(__dirname, "front", "build")));
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "front", "build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "front", "dist", "index.html"));
 });
 
 connection();
