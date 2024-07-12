@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .hover-animate {
+    @apply transform transition-transform duration-300 ease-in-out;
+  }
+
+  .hover-animate:hover {
+    @apply -translate-y-3 shadow-lg;
+  }
+}
